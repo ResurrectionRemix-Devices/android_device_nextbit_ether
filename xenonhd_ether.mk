@@ -10,14 +10,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_m.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common XenonHD stuff.
+$(call inherit-product, vendor/xenonhd/config/common_full_phone.mk)
+export OTA_TYPE=Experimental
 
 # Inherit device configuration
 $(call inherit-product, device/nextbit/ether/device.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := lineage_ether
+PRODUCT_NAME := xenonhd_ether
 BOARD_VENDOR := nextbit
 TARGET_VENDOR := nextbit
 PRODUCT_DEVICE := ether
@@ -25,6 +26,10 @@ PRODUCT_DEVICE := ether
 PRODUCT_BRAND := Nextbit
 PRODUCT_MODEL := Robin
 PRODUCT_MANUFACTURER := Nextbit
+
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.xenonhd.maintainer="AnierinB" \
+ro.xenonhd.donate="https://www.paypal.me/anierin
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="ether-user 7.1.1 Robin_Nougat_108 00WW_Jenkins_108 release-keys"
