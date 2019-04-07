@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES += \
-    $(LOCAL_DIR)/lineage_ether.mk
+    $(LOCAL_DIR)/bliss_ether.mk
