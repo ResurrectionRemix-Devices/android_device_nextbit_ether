@@ -1,3 +1,6 @@
+# Havoc
+ro.havoc.maintainer=AnierinB
+
 # Audio
 af.fast_track_multiplier=1
 ro.audio.flinger_standbytime_ms=300

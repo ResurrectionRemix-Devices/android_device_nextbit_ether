@@ -10,14 +10,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_m.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Havoc-OS stuff.
+$(call inherit-product, vendor/havoc/config/common.mk)
+export HAVOC_BUILD_TYPE=Official
 
 # Inherit device configuration
 $(call inherit-product, device/nextbit/ether/device.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := lineage_ether
+PRODUCT_NAME := havoc_ether
 BOARD_VENDOR := nextbit
 TARGET_VENDOR := nextbit
 PRODUCT_DEVICE := ether
