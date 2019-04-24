@@ -59,7 +59,7 @@ dalvik.vm.image-dex2oat-threads=4
 # Display
 ro.qualcomm.cabl=0
 
-ro.sf.lcd_density=480
+ro.sf.lcd_density=432
 
 debug.composition.type=c2d
 debug.hwui.use_buffer_age=false
